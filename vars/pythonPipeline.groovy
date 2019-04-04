@@ -7,7 +7,6 @@ def call() {
 
     docker.image('python:2.7.15-alpine').inside() {
       stage('Test') {
-        sh 'sudo -s'
         sh 'pip install -r requirements.txt'
         sh p.testCommand
       }
